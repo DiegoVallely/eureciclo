@@ -1,0 +1,33 @@
+
+
+def login():
+	form = SQLFORM(db.logn)
+	form = FORM('Name:',
+		INPUT(_type='text', placeholder='Email Address', _class='input-block-level',
+			requires=IS_NOT_EMPTY()),'password:',
+		INPUT(_type='Password', _placeholder='password', _class='input-block-level'),
+        INPUT(_type='Submit', _class='btn btn-large btn-primary', _value='Sing in', _onclick=""))
+    form.element('input[type=submit]')['_onclick'] = "return confirm('accepts!');"
+    if form.accepts(request.vars, session):
+        response.flash="success"
+        redirect(URL('index','index'))
+	elif form.errors:
+		response.flash="try again"
+	else:
+		response.flash = "please fill the form"
+	return dict(form=form)
+
+def contact():
+	cont = SQLFORM(db.post)
+	return dict(cont=cont)
+
+def user():
+    from gluon.storage import Storage
+    objects = Storage()
+    if request.args(0) in ['register']:
+        objects.register = auth.register()
+    elif request.args(0) in ['login']:
+        objects.login = auth.login()
+    else:
+        objects.form = auth()
+    return dict(objects=objects)

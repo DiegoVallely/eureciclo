@@ -1,0 +1,18 @@
+{{extend 'main.html'}}
+<!-- <h2>{{=T( request.args(0).replace('_',' ').capitalize() )}}</h2> -->
+
+
+<div class="row">  
+  {{if request.args(0) in ['login']:}}
+    <div class="span6">
+      <h2>Login</h2>  
+      {{=objects.login}}
+    </div>
+    {{pass}}
+    {{if request.args(0) in ['register']:}}
+    <div class="span6">
+      <h2>Register</h2> 
+      {{=objects.register}}
+    </div>
+    {{pass}} 
+</div>
