@@ -23,8 +23,8 @@ config.auth.settings.extra_fields.auth_user = [
 	Field("thumbnail", "upload")]
 
 config.mail.server = 'smtp.gmail.com:587'
-config.mail.sender = 'dsousamiranda@gmail.com'
-config.mail.login = 'dsousamiranda@gmail.com:h4ck3rsuperman01'
+config.mail.sender = ''
+config.mail.login = ''
 
 
 from gluon import current
