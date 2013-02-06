@@ -1,5 +1,5 @@
 
-Reciclagem = db.define_table("reciclagem",
+Reciclagem = db.define_table("lixo",
 	Field("papel"),
 	Field("metal"),
 	Field("plastico"),
