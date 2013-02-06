@@ -334,3 +334,27 @@ CREATE TABLE reciclagem(
     plastico CHAR(512),
     vidro CHAR(512)
 );
+timestamp: 2013-02-05T21:55:26.737536
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T21:56:49.250738
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T22:02:03.028092
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
