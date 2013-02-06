@@ -31,6 +31,7 @@ auth.settings.registration_requires_verification = \
 auth.settings.registration_requires_approval = \
     config.auth.settings.registration_requires_approval
 auth.settings.formstyle = config.auth.settings.formstyle
+auth.settings.register_next = config.auth.settings.register_next
 
 auth.settings.login_next = config.auth.settings.login_next
 auth.messages.logged_in = config.auth.messages.logged_in

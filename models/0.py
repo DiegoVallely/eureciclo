@@ -14,6 +14,7 @@ config.auth.settings.registration_requires_verification = False
 config.auth.settings.registration_requires_approval = False
 config.auth.settings.login_after_registration = False
 config.auth.settings.login_next = URL('home')
+config.auth.settings.register_next = URL('home')
 config.auth.messages.logged_in = 'Logged in'
 config.auth.messages.registration_successful = 'Registration successful'
 
