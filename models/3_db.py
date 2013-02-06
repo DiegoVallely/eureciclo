@@ -1,15 +1,9 @@
 
-Entrar = db.define_table("logn",
-	Field("name", "reference auth_user"),
-	Field("email", "reference user_email", notnull=True, requires=IS_EMAIL()),
-	Field("password"))
-
-
-Userr = db.define_table("username",
-	Field("user_id" ),
-	Field("name", "reference auth_user", notnull=True, unique=True),
-	Field("email", requires=IS_EMAIL(), notnull=True),
-	format="%(name)s")
+Reciclagem = db.define_table("reciclagem",
+	Field("papel"),
+	Field("metal"),
+	Field("plastico"),
+	Field("vidro"))
 
 UserAddress = db.define_table("user_address",
 	Field("user_id", "reference user_id"),
@@ -71,14 +65,15 @@ class NOT_STARTS_WITH(object):
 			return (value, None)
 
 
-Userr.name.requires = [IS_NOT_EMPTY(error_message="voce deve preencher"),
-                          IS_NOT_IN_DB(db, 'Userr.name')]
-# Contacts.description.represent = lambda value, row: XML(value)
-Userr.name.label = "email"
-Userr.name.comment = "Your name"
+# Userr.name.requires = [IS_NOT_EMPTY(error_message="voce deve preencher"),
+#                           IS_NOT_IN_DB(db, 'Userr.name')]
+# # Contacts.description.represent = lambda value, row: XML(value)
+# Userr.name.label = "email"
+# Userr.name.comment = "Your name"
 
 #auth user
-db.auth_user.avatar.label = "sua foto"
+db.auth_user.avatar.label = "Sua foto"
+db.auth_user.CPF.label = "Seu CPF"
 
-dbset = db(Userr.user_id == auth.user_id)
-Userr.name.requires = IS_IN_DB(dbset, "user_address.id", "%(country)s - %(city)s")
+# dbset = db(Userr.user_id == auth.user_id)
+# Userr.name.requires = IS_IN_DB(dbset, "user_address.id", "%(country)s - %(city)s")

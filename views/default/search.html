@@ -10,7 +10,7 @@
 		{{=A(name_of(user), _href=URL('wall', args=user.id))}}
 	</td>
 	<td>
-		<button onclick="ajax('{{=URL('friendship', args=('request', user.id))',
+		<button onclick="ajax('{{=URL('friendship', args=('request', user.id))}}',
 		[], null); jQuery(this).parent().html('pending')">
 		request friendship
 	</button>

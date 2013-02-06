@@ -39,8 +39,6 @@ def user():
 		objects.login = auth.login()
 		response.flash = "logged in"
 		objects.register = auth.register()
-		if objects.register == request.args(0):
-			redirect(URL('address'))
 	else:
 		objects.form = auth()
 	return dict(objects=objects)
@@ -63,7 +61,6 @@ def call():
 def data():
 	return dict(form=crud())
 
-# our home page, will show our posts and posts by friends
 
 @auth.requires_login()
 def home():
@@ -76,15 +73,10 @@ def home():
 	friends = [me]+[row.target for row in myfriends.select(Link.target)]
 	posts = db(Post.posted_by.belongs(friends)).select(orderby=~Post.posted_on,
 		limitby=(0,100))
-	# post_user = db(User).select()
-	# if user.id == Post.posted_by.default:	
-	# 	for post_users in post_user:
-	# 		post_users.first_name
+	form_lixo = SQLFORM(Reciclagem).process()
 
-	# name_welcome = SQLFORM(post_user)
 	return locals()
 
-# our wall will show our profile and our own posts
 
 @auth.requires_login()
 def wall():
@@ -97,7 +89,6 @@ def wall():
 	return locals()
 
 
-# a page for searching friends and requesting friendship
 @auth.requires_login()
 def search():
 	form = SQLFORM.factory(Field('name', requires=IS_NOT_EMPTY()))
@@ -113,11 +104,10 @@ def search():
 	return locals()
 
 
-# a page for accepting and denying friendship requests
 @auth.requires_login()
 def friends():
-	friends = db(User.id==Link.fonte)(Link.target==me).select(orderby==alphabetical)
-	requests = db(User.id==Link.target)(Link.fonte==me).select(orderby==alphabetical)
+	friends = db(User.id==Link.fonte)(Link.target==me).select(orderby=alphabetical)
+	requests = db(User.id==Link.target)(Link.fonte==me).select(orderby=alphabetical)
 	return locals()
 
 # this is the Ajax callback

@@ -283,3 +283,38 @@ timestamp: 2013-01-31T16:23:48.191940
 ALTER TABLE user_address ADD cidade CHAR(512);
 timestamp: 2013-02-02T11:43:48.854232
 ALTER TABLE user_address ADD tel CHAR(512);
+timestamp: 2013-02-06T10:01:13.775154
+ALTER TABLE auth_user ADD tel CHAR(512);
+timestamp: 2013-02-06T10:01:14.007578
+ALTER TABLE auth_user ADD region CHAR(512);
+timestamp: 2013-02-06T10:01:14.174283
+ALTER TABLE auth_user ADD cep CHAR(512);
+timestamp: 2013-02-06T10:01:14.352687
+ALTER TABLE auth_user ADD address CHAR(512);
+timestamp: 2013-02-06T10:01:14.583535
+ALTER TABLE auth_user ADD home_number CHAR(512);
+timestamp: 2013-02-06T10:01:14.792795
+ALTER TABLE auth_user ADD pais CHAR(512);
+timestamp: 2013-02-06T10:01:15.084658
+ALTER TABLE auth_user ADD address_type CHAR(512);
+timestamp: 2013-02-06T10:01:15.243475
+ALTER TABLE auth_user ADD estado CHAR(512);
+timestamp: 2013-02-06T10:01:15.539860
+ALTER TABLE auth_user ADD cidade CHAR(512);
+timestamp: 2013-02-06T10:10:58.096230
+ALTER TABLE auth_user ADD cpf CHAR(512);
+timestamp: 2013-02-06T10:16:20.077062
+ALTER TABLE auth_user ADD regiao CHAR(512);
+timestamp: 2013-02-06T10:16:20.280433
+ALTER TABLE auth_user ADD complemento CHAR(512);
+timestamp: 2013-02-06T10:16:20.467253
+ALTER TABLE auth_user ADD endereco TEXT;
+timestamp: 2013-02-06T10:23:38.605635
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+success!

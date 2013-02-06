@@ -150,14 +150,21 @@
 
 	</div>
 	
-	{{=form}}
-	<script>jQuery('textarea').css('width','600px').css('height','50px');</script>
-	{{for post in posts:}}
-	<div style="background: #f0f0f0; margin-bottom: 5px; padding: 8px;">
-		<h3>{{=name_of(post.posted_by)}} on {{=post.posted_on}}:</h3>
-		{{=MARKMIN(post.body)}}
+	<div class="row">
+		<div class="span6">
+			{{=form}}
+			<script>jQuery('textarea').css('width','600px').css('height','50px');</script>
+			{{for post in posts:}}
+			<div style="background: #f0f0f0; margin-bottom: 5px; padding: 8px;">
+				<h3>{{=name_of(post.posted_by)}} on {{=post.posted_on}}:</h3>
+				{{=MARKMIN(post.body)}}
+			</div>
+			{{pass}}
+		</div>
+		<div class="span6">
+			{{=form_lixo}}
+		</div>
 	</div>
-	{{pass}}
 	</div><!--/span-->
 
 	  
