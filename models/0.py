@@ -19,6 +19,15 @@ config.auth.messages.registration_successful = 'Registration successful'
 
 
 config.auth.settings.extra_fields.auth_user = [
+	Field("CPF"),
+	Field("pais"),
+	Field("region"),
+	Field("estado"),
+	Field("cidade"),
+	Field("address_type"),
+	Field("address"),
+	Field("home_number"),
+	Field("tel", requires=IS_MATCH('[\d\-\(\)] +')),
 	Field("avatar", "upload"),
 	Field("thumbnail", "upload")]
 
