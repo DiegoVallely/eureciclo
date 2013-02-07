@@ -383,3 +383,11 @@ CREATE TABLE lixo(
     vidro CHAR(512)
 );
 success!
+timestamp: 2013-02-07T09:20:37.337384
+CREATE TABLE lixo(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
