@@ -1,5 +1,5 @@
 (dp1
-S'name'
+S'id'
 p2
 (dp3
 S'length'
@@ -10,19 +10,19 @@ p5
 I00
 sS'sortable'
 p6
-I2
+I1
 sS'sql'
 p7
-S'CHAR(512)'
+S'INTEGER PRIMARY KEY AUTOINCREMENT'
 p8
 sS'notnull'
 p9
 I00
 sS'type'
 p10
-S'string'
+S'id'
 p11
-ssS'nome'
+ssS'id_post'
 p12
 (dp13
 S'sortable'
@@ -30,7 +30,7 @@ p14
 I2
 sS'sql'
 p15
-S'CHAR(512)'
+S'INTEGER REFERENCES user_id (id) ON DELETE CASCADE'
 p16
 sS'length'
 p17
@@ -43,9 +43,9 @@ p19
 I00
 sS'type'
 p20
-S'string'
+S'reference user_id'
 p21
-ssS'id'
+ssS'name'
 p22
 (dp23
 g4
@@ -53,14 +53,14 @@ I512
 sg5
 I00
 sg6
-I1
+I2
 sg7
-S'INTEGER PRIMARY KEY AUTOINCREMENT'
+S'CHAR(512)'
 p24
 sg9
 I00
 sg10
-S'id'
+S'string'
 p25
 ssS'posting'
 p26
@@ -79,7 +79,7 @@ I00
 sg10
 S'text'
 p29
-ssS'id_post'
+ssS'nome'
 p30
 (dp31
 S'sortable'
@@ -87,7 +87,7 @@ p32
 I2
 sS'sql'
 p33
-S'INTEGER REFERENCES user_id (id) ON DELETE CASCADE'
+S'CHAR(512)'
 p34
 sS'length'
 p35
@@ -100,6 +100,6 @@ p37
 I00
 sS'type'
 p38
-S'reference user_id'
+S'string'
 p39
 ss.
