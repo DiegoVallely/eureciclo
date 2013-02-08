@@ -396,3 +396,5 @@ CREATE TABLE lixo(
 timestamp: 2013-02-08T14:48:29.740639
 ALTER TABLE contacts ADD email CHAR(512);
 >>>>>>> work
+timestamp: 2013-02-08T14:24:19.951393
+ALTER TABLE user_address ADD cpf CHAR(512) UNIQUE;

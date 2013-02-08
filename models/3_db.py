@@ -6,7 +6,7 @@ Reciclagem = db.define_table("lixo",
 	Field("vidro"))
 
 UserAddress = db.define_table("user_address",
-	Field("cpf", unique=True, requires=IS_NOT_EMPTY()),
+	Field("cpf", requires=IS_NOT_EMPTY()),
 	Field("CEP"),
 	Field("Pais"),
 	Field("region"),
