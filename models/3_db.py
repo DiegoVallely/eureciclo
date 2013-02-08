@@ -1,12 +1,12 @@
 
-Reciclagem = db.define_table("reciclagem",
+Reciclagem = db.define_table("lixo",
 	Field("papel"),
 	Field("metal"),
 	Field("plastico"),
 	Field("vidro"))
 
 UserAddress = db.define_table("user_address",
-	Field("user_id", "reference user_id"),
+	Field("cpf", unique=True, requires=IS_NOT_EMPTY()),
 	Field("CEP"),
 	Field("Pais"),
 	Field("region"),
@@ -15,7 +15,7 @@ UserAddress = db.define_table("user_address",
 	Field("address_type"),
 	Field("address"),
 	Field("home_number"),
-	Field("tel", requires=IS_MATCH('[\d\-\(\)] +')),
+	Field("tel"),
 	Field("extra"),
 	format="%(region)s")
 
@@ -26,6 +26,7 @@ Pictures = db.define_table("pictures",
 
 Contacts = db.define_table("contacts",
 	Field("name", requires=IS_NOT_EMPTY()),
+	Field("email", requires=IS_NOT_EMPTY()),
 	Field("posting", "text", required=IS_NOT_EMPTY()),
 	format='%(name)s')
 

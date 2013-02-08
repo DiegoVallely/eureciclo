@@ -318,3 +318,78 @@ CREATE TABLE reciclagem(
     vidro CHAR(512)
 );
 success!
+timestamp: 2013-02-05T21:49:32.192035
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T21:52:16.350231
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T21:55:26.737536
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T21:56:49.250738
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T22:02:03.028092
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T22:06:59.261658
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T22:22:20.745266
+CREATE TABLE reciclagem(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-05T22:35:38.459140
+CREATE TABLE lixo(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+success!
+timestamp: 2013-02-07T09:20:37.337384
+CREATE TABLE lixo(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    papel CHAR(512),
+    metal CHAR(512),
+    plastico CHAR(512),
+    vidro CHAR(512)
+);
+timestamp: 2013-02-08T14:48:29.740639
+ALTER TABLE contacts ADD email CHAR(512);
