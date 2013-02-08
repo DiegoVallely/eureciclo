@@ -391,3 +391,8 @@ CREATE TABLE lixo(
     plastico CHAR(512),
     vidro CHAR(512)
 );
+<<<<<<< HEAD
+=======
+timestamp: 2013-02-08T14:48:29.740639
+ALTER TABLE contacts ADD email CHAR(512);
+>>>>>>> work

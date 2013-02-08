@@ -42,13 +42,6 @@ def user():
 	else:
 		objects.form = auth()
 	return dict(objects=objects)
-# 	return dict(objects=auth())
-
-def register():
-	form = auth.register()
-	if auth.register == True:
-		pos_register = SQLFORM(UserAddress)
-	return dict(form=form, pos_register=pos_register)
 
 
 def download():
